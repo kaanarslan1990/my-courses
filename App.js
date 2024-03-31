@@ -28,8 +28,8 @@ export default function App() {
         <CourseInput visible={modalIsVisible} onAddLoad={addLoad} onCancel={endModal}/>
         <View>
           <FlatList data={loads} renderItem={({item})=> (
-            <View>
-              <Text>{item.text}</Text>
+            <View style={styles.loadItem}>
+              <Text style={styles.loadText}>{item.text}</Text>
             </View>
           )}/>
         </View>
@@ -45,4 +45,16 @@ const styles = StyleSheet.create({
     paddingTop: 50,
     paddingHorizontal: 20,
   },
+  loadItem:{
+    backgroundColor:'gray',
+    margin:8,
+    borderRadius:5
+
+  },
+  loadText:{
+    padding:8,
+    color:'white',
+
+
+  }
 });
